@@ -70,8 +70,8 @@ class HomeFragment : Fragment() {
         override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
         override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
             if (!isValidPassword(s.toString())) {
-                if (binding!!.editCurrentPass.text.hashCode() == s.hashCode() && !binding!!.editCurrentPass.text.toString()
-                        .isEmpty()
+                if (binding!!.editCurrentPass.text.hashCode() == s.hashCode() && binding!!.editCurrentPass.text.toString()
+                        .isNotEmpty()
                 ) {
                     binding!!.editConfirmPass.background =
                         resources.getDrawable(R.drawable.edit_border_red)
@@ -79,16 +79,16 @@ class HomeFragment : Fragment() {
                         resources.getString(R.string.change_pass_below)
                     binding!!.editCurrentPass.requestFocus()
                 }
-                if (binding!!.editNewPass.text.hashCode() == s.hashCode() && !binding!!.editNewPass.text.toString()
-                        .isEmpty()
+                if (binding!!.editNewPass.text.hashCode() == s.hashCode() && binding!!.editNewPass.text.toString()
+                        .isNotEmpty()
                 ) {
                     binding!!.editNewPass.background =
                         resources.getDrawable(R.drawable.edit_border_red)
                     binding!!.editNewPass.error = resources.getString(R.string.change_pass_below)
                     binding!!.editNewPass.requestFocus()
                 }
-                if (binding!!.editConfirmPass.text.hashCode() == s.hashCode() && !binding!!.editConfirmPass.text.toString()
-                        .isEmpty()
+                if (binding!!.editConfirmPass.text.hashCode() == s.hashCode() && binding!!.editConfirmPass.text.toString()
+                        .isNotEmpty()
                 ) {
                     binding!!.editConfirmPass.background =
                         resources.getDrawable(R.drawable.edit_border_red)
@@ -175,9 +175,9 @@ class HomeFragment : Fragment() {
 
     // function to check permission
     fun checkAndRequestPermissions(context: Activity?): Boolean {
-        val WExtstorePermission =
+        val wExtstorePermission =
             ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
-        val RExtstorePermission =
+        val rExtstorePermission =
             context?.let { ContextCompat.checkSelfPermission(it, Manifest.permission.READ_EXTERNAL_STORAGE) }
         val cameraPermission =
             context?.let { ContextCompat.checkSelfPermission(it, Manifest.permission.CAMERA) }
@@ -185,10 +185,10 @@ class HomeFragment : Fragment() {
         if (cameraPermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.CAMERA)
         }
-        if (WExtstorePermission != PackageManager.PERMISSION_GRANTED) {
+        if (wExtstorePermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.WRITE_EXTERNAL_STORAGE)
         }
-        if (RExtstorePermission != PackageManager.PERMISSION_GRANTED) {
+        if (rExtstorePermission != PackageManager.PERMISSION_GRANTED) {
             listPermissionsNeeded.add(Manifest.permission.READ_EXTERNAL_STORAGE)
         }
         if (!listPermissionsNeeded.isEmpty()) {
@@ -306,8 +306,6 @@ class HomeFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
-        SharePrefrancClass.getInstance(activity)!!.clearPref("encodeImage")
-        SharePrefrancClass.getInstance(activity)!!.clearPref("stateStr")
     }
 
     override fun onResume() {

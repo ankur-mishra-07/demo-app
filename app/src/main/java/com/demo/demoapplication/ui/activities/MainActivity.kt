@@ -2,7 +2,6 @@ package com.demo.demoapplication.ui.activities
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -38,13 +37,13 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(this, R.id.nav_host_fragment_content_main)
         setupActionBarWithNavController(this, navController, mAppBarConfiguration!!)
         setupWithNavController(navigationView, navController)
-        binding!!.appBarMain.search.setOnClickListener { v: View? ->
+        binding!!.appBarMain.search.setOnClickListener {
             findNavController(
                 this,
                 R.id.nav_host_fragment_content_main
             ).navigate(R.id.nav_search)
         }
-        binding!!.appBarMain.notification.setOnClickListener { v: View? ->
+        binding!!.appBarMain.notification.setOnClickListener {
             findNavController(
                 this,
                 R.id.nav_host_fragment_content_main
@@ -74,7 +73,7 @@ class MainActivity : AppCompatActivity() {
             val fragments1 =
                 supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main)!!
                     .childFragmentManager.fragments
-            if (!fragments1.isEmpty()) {
+            if (fragments1.isNotEmpty()) {
                 for (f in fragments1) {
                     if (f != null && f.isVisible) {
                         f.onRequestPermissionsResult(requestCode, permissions, grantResults)

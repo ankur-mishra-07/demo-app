@@ -2,27 +2,24 @@ package com.demo.demoapplication.ui.fragments.search
 
 import android.app.Dialog
 import android.graphics.Color
-
-import com.demo.demoapplication.ui.adapters.AdapterListUserInfo
-import com.demo.demoapplication.ui.models.SearchListModel
-import android.view.LayoutInflater
-import android.view.ViewGroup
-import android.os.Bundle
-import com.demo.demoapplication.ui.fragments.search.SearchViewModel
-import androidx.lifecycle.ViewModelProvider
-import com.demo.demoapplication.R
-import android.text.TextWatcher
-import android.text.Editable
 import android.graphics.drawable.ColorDrawable
+import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewGroup
 import android.view.Window
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import com.demo.demoapplication.R
 import com.demo.demoapplication.databinding.FragmentSearchBinding
+import com.demo.demoapplication.ui.adapters.AdapterListUserInfo
+import com.demo.demoapplication.ui.models.SearchListModel
 import de.hdodenhof.circleimageview.CircleImageView
-import java.util.ArrayList
 
 class SearchFragment : Fragment() {
     private var mAdapter: AdapterListUserInfo? = null
@@ -37,7 +34,7 @@ class SearchFragment : Fragment() {
         )
         binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root: View = binding!!.root
-        if (!items.isEmpty()) {
+        if (items.isNotEmpty()) {
             items = ArrayList()
         }
         items.add(SearchListModel("Asim", "aseem8384@gmail.com", R.drawable.user))

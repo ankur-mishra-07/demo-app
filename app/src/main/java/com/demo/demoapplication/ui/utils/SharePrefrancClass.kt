@@ -6,7 +6,7 @@ import com.google.gson.Gson
 import com.demo.demoapplication.ui.utils.SharePrefrancClass
 
 class SharePrefrancClass {
-    var preference: SharedPreferences?
+    var preference: SharedPreferences? = context!!.getSharedPreferences("MyPref", Context.MODE_PRIVATE)
 
     /**
      * savePref() for save
@@ -107,7 +107,6 @@ MyObject obj = gson.fromJson(json, MyObject.class);*/
     companion object {
         private var ourInstance: SharePrefrancClass? = null
         private var context: Context? = null
-        const val PREFERENCE_NAME = "MyPref"
         fun getInstance(mcontext: Context?): SharePrefrancClass? {
             context = mcontext
             if (ourInstance == null) {
@@ -117,7 +116,4 @@ MyObject obj = gson.fromJson(json, MyObject.class);*/
         }
     }
 
-    init {
-        preference = context!!.getSharedPreferences("MyPref", Context.MODE_PRIVATE)
-    }
 }

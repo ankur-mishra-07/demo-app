@@ -6,7 +6,6 @@ import android.widget.TextView
 import com.demo.demoapplication.R
 import android.view.ViewGroup
 import android.view.LayoutInflater
-import com.demo.demoapplication.ui.adapters.AdapterListUserInfo.OriginalViewHolder
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
@@ -14,10 +13,9 @@ import android.view.View
 import android.widget.Filter
 import com.bumptech.glide.Glide
 import com.demo.demoapplication.ui.utils.ItemAnimation
-import android.widget.Filter.FilterResults
 import android.widget.Filterable
 import android.widget.ImageView
-import java.util.ArrayList
+import java.util.*
 
 class AdapterListUserInfo(context: Context, items1: List<SearchListModel>, animation_type: Int) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>(), Filterable {
@@ -117,7 +115,7 @@ class AdapterListUserInfo(context: Context, items1: List<SearchListModel>, anima
                 var constraint: CharSequence? = constraint
                 val results =
                     FilterResults() // Holds the results of a filtering operation in values
-                val FilteredArrList: ArrayList<SearchListModel> = ArrayList()
+                val filteredArrList: ArrayList<SearchListModel> = ArrayList()
                 if (itemsFilter == null) {
                     itemsFilter = ArrayList(items) // saves the original data in mOriginalValues
                 }
@@ -127,18 +125,18 @@ class AdapterListUserInfo(context: Context, items1: List<SearchListModel>, anima
                  * else does the Filtering and returns FilteredArrList(Filtered)
                  *
                  */
-                if (constraint == null || constraint.length == 0) {
+                if (constraint == null || constraint.isEmpty()) {
 
                     // set the Original result to return
                     results.count = itemsFilter!!.size
                     results.values = itemsFilter
                 } else {
-                    constraint = constraint.toString().toLowerCase()
+                    constraint = constraint.toString().lowercase(Locale.getDefault())
                     for (i in itemsFilter!!.indices) {
                         val data = itemsFilter!![i].name
                         if (data != null) {
-                            if (data.toLowerCase().startsWith(constraint.toString())) {
-                                FilteredArrList.add(
+                            if (data.lowercase(Locale.getDefault()).startsWith(constraint.toString())) {
+                                filteredArrList.add(
                                     SearchListModel(
                                         itemsFilter!![i].name,
                                         itemsFilter!![i].email,
@@ -149,16 +147,12 @@ class AdapterListUserInfo(context: Context, items1: List<SearchListModel>, anima
                         }
                     }
                     // set the Filtered result to return
-                    results.count = FilteredArrList.size
-                    results.values = FilteredArrList
+                    results.count = filteredArrList.size
+                    results.values = filteredArrList
                 }
                 return results
             }
         }
-    }
-
-    fun setOnItemClickListener() {
-        TODO("Not yet implemented")
     }
 
     init {

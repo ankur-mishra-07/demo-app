@@ -1,6 +1,5 @@
 package com.demo.demoapplication.ui.utils
 
-import com.demo.demoapplication.ui.utils.ItemAnimation
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.view.View
