@@ -40,12 +40,77 @@
     <string name="current_pass">Current Password</string>
     <string name="new_pass">New Password</string>
     <string name="confirm_pass">Confirm Password</string>
-    <string name="change_pass_below">&#8226; At least 8 characters - The more characters, the better\n<br/>&#8226; A mixture of bothe uppercase and lowecase letters\n<br/>&#8226; A mixture of letters and numbers\n<br/>&#8226; Inclusion of at least one special character, eg..!@#?] Note : do not use <or> in your password. as both can cause problems in web browser</or><br/></string>
+    <string name="change_pass_below">&#8226; At least 8 characters - The more characters <item>
+        </item> the better\n<br/>&#8226; A mixture of bothe uppercase and lowecase letters\n<br/>&#8226; A mixture of letters and numbers\n<br/>&#8226; Inclusion of at least one special character <item>
+        </item> eg..!@#?] Note : do not use <or> in your password. as both can cause problems in web browser</or><br/></string>
     <string name="tearms">Share with BallotBook Tearms and Conditions.</string>
     <string name="clickUpload">Click to upload</string>
-    <string name="clickUploadTupe">SVG,PNG,JPG or GIF (max. 800x800px)</string>
+    <string name="clickUploadTupe">SVG <item>
+        </item>PNG <item>
+        </item>JPG or GIF (max. 800x800px)</string>
     <string name="editBottom">This information could be displayed publicly so be careful what you share</string>
     <string name="select_image_from">Select Image from</string>
     <string name="camera">Camera</string>
     <string name="files_gallery">Files/Gallery</string>
+    <string name="people_name">People Name</string>
+    <string name="xyz_gmail_com">xyz@gmail.com</string>
+
+    <string-array name="states">
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>American Samoa</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>District of Columbia</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Guam</item>
+        <item>Hawaii</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Iowa</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Maine</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Mississippi</item>
+        <item>Missouri</item>
+        <item>Montana</item>
+        <item>Nebraska</item>
+        <item>Nevada</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>New York</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Northern Marianas Islands</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Puerto Rico</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Vermont</item>
+        <item>Virginia</item>
+        <item>Virgin Islands</item>
+        <item>Washington</item>
+        <item>West Virginia</item>
+        <item>Wisconsin</item>
+        <item>Wyoming</item>
+    </string-array>
 </resources>

@@ -513,17 +513,15 @@
                                         android:textColor="@color/black"
                                         />
 
-                                    <EditText
-                                        android:id="@+id/editState"
+                                    <Spinner
+                                        android:id="@+id/editStateSpinner"
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/dim40dp"
                                         android:layout_marginTop="@dimen/dim5dp"
                                         android:background="@drawable/edit_border"
                                         android:paddingStart="10dp"
-                                        android:textSize="@dimen/dim15sp"
-                                        android:textColorHint="@color/editBelow"
-                                        android:textColor="@color/editBelow"
-                                        android:hint="@string/state"/>
+                                        />
+
                                 </LinearLayout>
                             </LinearLayout>
                             <LinearLayout
@@ -555,18 +553,14 @@
                                         android:textColor="@color/black"
                                         />
 
-                                    <EditText
-                                        android:id="@+id/editCountry"
+                                    <Spinner
+                                        android:id="@+id/editCountrySpinner"
                                         android:layout_width="match_parent"
                                         android:layout_height="@dimen/dim40dp"
                                         android:layout_marginTop="@dimen/dim5dp"
                                         android:background="@drawable/edit_border"
                                         android:paddingStart="10dp"
-                                        android:textSize="@dimen/dim15sp"
-                                        android:textColor="@color/editBelow"
-                                        android:textColorHint="@color/editBelow"
-                                        android:hint="@string/country"/>
-
+                                        />
 
                                 </LinearLayout>
 
