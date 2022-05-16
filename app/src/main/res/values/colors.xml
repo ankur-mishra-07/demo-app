@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#353944</color>
+    <color name="purple_500">#353944</color>
+    <color name="purple_700">#353944</color>
+    <color name="teal_200">#353944</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="background">#f6f6f6</color>
+    <color name="editBelow">#B3B1B1</color>
+    <color name="red">#E61010</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="overlay_dark_40">#66000000</color>
+
+</resources>

@@ -1,0 +1,58 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="dim5dp">5dp</dimen>
+    <dimen name="dim10dp">10dp</dimen>
+    <dimen name="dim15dp">15dp</dimen>
+    <dimen name="dim18dp">18dp</dimen>
+    <dimen name="dim20dp">20dp</dimen>
+    <dimen name="dim30dp">30dp</dimen>
+    <dimen name="dim40dp">40dp</dimen>
+    <dimen name="dim50dp">50dp</dimen>
+    <dimen name="dim60dp">60dp</dimen>
+    <dimen name="dim70dp">70dp</dimen>
+    <dimen name="dim80dp">80dp</dimen>
+    <dimen name="dim90dp">90dp</dimen>
+    <dimen name="dim100dp">100dp</dimen>
+    <dimen name="dim110dp">110dp</dimen>
+    <dimen name="dim120dp">120dp</dimen>
+
+    <dimen name="dim10sp">10sp</dimen>
+    <dimen name="dim13sp">13sp</dimen>
+    <dimen name="dim15sp">15sp</dimen>
+    <dimen name="dim18sp">18sp</dimen>
+    <dimen name="dim20sp">20sp</dimen>
+    <dimen name="dim30sp">30sp</dimen>
+    <dimen name="dim40sp">40sp</dimen>
+    <dimen name="dim50sp">50sp</dimen>
+    <dimen name="dim60sp">60sp</dimen>
+    <dimen name="dim70sp">70sp</dimen>
+    <dimen name="dim80sp">80sp</dimen>
+    <dimen name="dim90sp">90sp</dimen>
+    <dimen name="dim100sp">100sp</dimen>
+    <dimen name="dim110sp">110sp</dimen>
+    <dimen name="dim120sp">120sp</dimen>
+
+    <!--genaral spacing-->
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_small">3dp</dimen>
+    <dimen name="spacing_medium">5dp</dimen>
+    <dimen name="spacing_xmedium">7dp</dimen>
+    <dimen name="spacing_middle">10dp</dimen>
+    <dimen name="spacing_large">15dp</dimen>
+    <dimen name="spacing_smlarge">18dp</dimen>
+    <dimen name="spacing_mlarge">20dp</dimen>
+    <dimen name="spacing_mxlarge">25dp</dimen>
+    <dimen name="spacing_xlarge">35dp</dimen>
+    <dimen name="spacing_xmlarge">40dp</dimen>
+    <dimen name="spacing_xxlarge">50dp</dimen>
+    <dimen name="spacing_xxxlarge">55dp</dimen>
+    <dimen name="imageCircle">100dp</dimen>
+    <dimen name="fixDialogLength">280dp</dimen>
+    <dimen name="dialogLength">400dp</dimen>
+</resources>

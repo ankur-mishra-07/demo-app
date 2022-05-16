@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white">
+
+
+        <EditText
+            android:id="@+id/searchProduct"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim50dp"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_marginEnd="@dimen/dim20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_border"
+            android:drawableRight="@drawable/ic_search_24"
+            android:hint="Search"
+            android:textSize="@dimen/dim13sp"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/dim20dp"
+            android:paddingEnd="@dimen/dim10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:scrollingCache="true"
+            tools:listitem="@layout/item_user_info"
+            android:layout_marginTop="@dimen/dim70dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/searchProduct"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
